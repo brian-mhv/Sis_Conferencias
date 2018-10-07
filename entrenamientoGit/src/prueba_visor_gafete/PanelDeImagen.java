@@ -21,7 +21,7 @@ public class PanelDeImagen extends JComponent
     public PanelDeImagen()
     {
         width = 860;    // arbitrary size for empty panel
-        height = 760;
+        height = 460;
         
      }
     public void setImage()
@@ -34,9 +34,6 @@ public class PanelDeImagen extends JComponent
         
         
         if(img != null) {
-            /*width = my_image.getWidth(); 
-            height = my_image.getHeight();
-            //my_image = image;*/
             repaint();
         }
     }
@@ -59,12 +56,13 @@ public class PanelDeImagen extends JComponent
     
     public void paintComponent(Graphics g)
     {
-        //Graphics2D g2;
+        Font fuente=new Font("Arial", Font.PLAIN, 35);
+        g.setFont(fuente);
         Dimension size = getSize();
         g.clearRect(0, 0, size.width, size.height);
         if(img != null) {
             g.drawImage(img, 0, 0, null);
-            g.drawString("nombre", 50,50 );
+            g.drawString("nombres", 50,70 );
         }
     }
 }
