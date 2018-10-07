@@ -56,11 +56,7 @@ public class VisorDeGafete implements Printable
                 });
         contentPane.setLayout(new BorderLayout());
         contentPane.add(imprimir, BorderLayout.NORTH);
-        contentPane.add(pi, BorderLayout.CENTER);
-        
-        //contentPane.add(nombre_asistente,BorderLayout.NORTH);
-
-        // building is done - arrange the components and show        
+        contentPane.add(pi, BorderLayout.CENTER);        
         frame.pack();
         frame.setVisible(true);
     }
