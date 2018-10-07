@@ -72,5 +72,8 @@ public class VisorDeGafete implements Printable
         pi.printAll(graf);
         return PAGE_EXISTS;
     }
-   
+ public static void main(String[] args)
+    {
+        VisorDeGafete v=new VisorDeGafete();
+    }  
 }

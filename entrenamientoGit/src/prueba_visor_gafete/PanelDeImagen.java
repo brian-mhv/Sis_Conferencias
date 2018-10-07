@@ -57,12 +57,13 @@ public class PanelDeImagen extends JComponent
     public void paintComponent(Graphics g)
     {
         Font fuente=new Font("Arial", Font.PLAIN, 35);
-        g.setFont(fuente);
+        
         Dimension size = getSize();
         g.clearRect(0, 0, size.width, size.height);
         if(img != null) {
             g.drawImage(img, 0, 0, null);
-            g.drawString("nombres", 50,70 );
+            g.setFont(fuente);
+            g.drawString("Scrum", 50,100 );
         }
     }
 }
