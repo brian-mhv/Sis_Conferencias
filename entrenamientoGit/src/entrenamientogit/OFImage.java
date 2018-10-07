@@ -7,6 +7,9 @@ package entrenamientogit;
 
 import java.awt.*;
 import java.awt.image.*;
+import java.io.File;
+import java.io.IOException;
+import javax.imageio.ImageIO;
 import javax.swing.*;
 
 public class OFImage extends BufferedImage
@@ -15,10 +18,12 @@ public class OFImage extends BufferedImage
      * Create an OFImage copied from a BufferedImage.
      * @param image The image to copy.
      */
+    
     public OFImage(BufferedImage image)
     {
          super(image.getColorModel(), image.copyData(null), 
                image.isAlphaPremultiplied(), null);
+         
     }
 
     /**

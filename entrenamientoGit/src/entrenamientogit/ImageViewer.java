@@ -36,12 +36,12 @@ public class ImageViewer
     /**
      * Open function: open a file chooser to select a new image file.
      */
-    private void openFile()
+    /*private void openFile()
     {
         OFImage image = ImageFileManager.getImage();
         imagePanel.setImage(image);
         frame.pack();
-    }
+    }*/
     
     /**
      * Quit function: quit the application.
@@ -59,11 +59,12 @@ public class ImageViewer
     private void makeFrame()
     {
         frame = new JFrame("gafete");
-        makeMenuBar(frame);
+        //makeMenuBar(frame);
         
         Container contentPane = frame.getContentPane();
         
         imagePanel = new ImagePanel();
+        imagePanel.setImage();
         contentPane.add(imagePanel);
 
         // building is done - arrange the components and show        
@@ -75,7 +76,7 @@ public class ImageViewer
      * Create the main frame's menu bar.
      * @param frame   The frame that the menu bar should be added to.
      */
-    private void makeMenuBar(JFrame frame)
+    /*private void makeMenuBar(JFrame frame)
     {
         final int SHORTCUT_MASK =
             Toolkit.getDefaultToolkit().getMenuShortcutKeyMask();
@@ -102,5 +103,5 @@ public class ImageViewer
                            });
         fileMenu.add(quitItem);
 
-    }
+    }*/
 }

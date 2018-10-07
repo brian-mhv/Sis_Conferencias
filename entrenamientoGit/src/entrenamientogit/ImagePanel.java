@@ -8,6 +8,9 @@ package entrenamientogit;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.image.*;
+import java.io.File;
+import java.io.IOException;
+import javax.imageio.ImageIO;
 
 /**
  * An ImagePanel is a Swing component that can display an OFImage.
@@ -24,16 +27,27 @@ public class ImagePanel extends JComponent
 
     // An internal image buffer that is used for painting. For
     // actual display, this image buffer is then copied to screen.
-    private OFImage panelImage;
+    private OFImage my_image;
+    BufferedImage img=null;
 
     /**
      * Create a new, empty ImagePanel.
      */
     public ImagePanel()
     {
-        width = 560;    // arbitrary size for empty panel
-        height = 560;
-        panelImage = null;
+        width = 1260;    // arbitrary size for empty panel
+        height = 1060;
+        setBI();
+        my_image = new OFImage(img);
+    }
+    public void setBI()
+    {
+        
+        try {
+            img = ImageIO.read(new File("prueba.png"));
+        } catch (IOException e) {
+            System.out.println("No se cargó");
+        }
     }
 
     /**
@@ -41,12 +55,13 @@ public class ImagePanel extends JComponent
      * 
      * @param image  The image to be displayed.
      */
-    public void setImage(OFImage image)
+    public void setImage()
     {
-        if(image != null) {
-            width = image.getWidth();
-            height = image.getHeight();
-            panelImage = image;
+        
+        if(my_image != null) {
+            /*width = my_image.getWidth(); 
+            height = my_image.getHeight();
+            //my_image = image;*/
             repaint();
         }
     }
@@ -56,8 +71,8 @@ public class ImagePanel extends JComponent
      */
     public void clearImage()
     {
-        if(panelImage != null) {
-            Graphics imageGraphics = panelImage.getGraphics();
+        if(my_image != null) {
+            Graphics imageGraphics = my_image.getGraphics();
             imageGraphics.setColor(Color.LIGHT_GRAY);
             imageGraphics.fillRect(0, 0, width, height);
             repaint();
@@ -90,8 +105,8 @@ public class ImagePanel extends JComponent
     {
         Dimension size = getSize();
         g.clearRect(0, 0, size.width, size.height);
-        if(panelImage != null) {
-            g.drawImage(panelImage, 0, 0, null);
+        if(my_image != null) {
+            g.drawImage(my_image, 0, 0, null);
         }
     }
 }
