@@ -3,12 +3,13 @@ package prueba_visor_gafete;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import java.awt.print.*;
 
 public class VisorDeGafete
 {
     private JFrame frame;
     private PanelDeImagen pi;
-    private JLabel nombre_asistente=new JLabel("nombre");
+    private JButton imprimir;
     /**
      * Create an ImageViewer show it on screen.
      */
@@ -28,12 +29,13 @@ public class VisorDeGafete
         frame = new JFrame("gafete");
               
         Container contentPane = frame.getContentPane();
-        
+        ImageIcon icono=new ImageIcon("p1print.png");
+        imprimir=new JButton(icono);
         pi = new PanelDeImagen();
         pi.setImage();
-        //contentPane.setLayout(new BorderLayout());
-        pi.add(nombre_asistente);
-        contentPane.add(pi);
+        contentPane.setLayout(new BorderLayout());
+        contentPane.add(imprimir, BorderLayout.NORTH);
+        contentPane.add(pi, BorderLayout.CENTER);
         
         //contentPane.add(nombre_asistente,BorderLayout.NORTH);
 
