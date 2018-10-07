@@ -1,0 +1,27 @@
+commit b6a6aeeb5fb6264d3789b18ef126e9ccdf077964
+Author: mviza <mviza9900@gmail.com>
+Date:   Sat Oct 6 20:05:18 2018 -0400
+
+    se agrego una unica imagen para visualizar como prueba
+
+commit 97529b49f1efaaf5c1ca6f842597ec45150aae21
+Author: mviza <mviza9900@gmail.com>
+Date:   Fri Oct 5 15:02:57 2018 -0400
+
+    se ha creado un visualizador de imagenes, como prueba para luego realizar un visualizador de gafetes
+
+commit 78bf02d7e08539f6a4a735d515f7399decbda5e9
+Author: EQUIPO <EQUIPO@Arminda>
+Date:   Thu Oct 4 14:55:00 2018 -0400
+
+    creado un panel
+
+commit 875d0ebed5a7439a72ced231b5266b630dcfcaea
+Author: Brian <brai_mian_hv@outlook.com>
+Date:   Wed Sep 26 23:51:30 2018 -0400
+
+    inicio - mensaje
+
+commit 65c65450dbd29d8d2a36d355d02e4586beeaf60e
+Author: Brian <brai_mian_hv@outlook.com>
+Date:   Wed Sep 26 23:47:19 2018 -0400
