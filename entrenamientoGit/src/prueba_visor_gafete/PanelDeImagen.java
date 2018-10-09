@@ -16,7 +16,7 @@ public class PanelDeImagen extends JComponent
 
     
     BufferedImage img=null;
-
+    String nombre_asistente;
     
     public PanelDeImagen()
     {
@@ -63,7 +63,7 @@ public class PanelDeImagen extends JComponent
         if(img != null) {
             g.drawImage(img, 0, 0, null);
             g.setFont(fuente);
-            g.drawString("Scrum", 50,100 );
+            g.drawString("Scrum", 50,180 );
         }
     }
 }
